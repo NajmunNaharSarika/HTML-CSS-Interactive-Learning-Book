@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    .cm {
+  font-size: 1cm;
+}
+.mm {
+  font-size: 5mm;
+}
+.in {
+  font-size: .4in;
+}
+.px {
+  font-size: 16px;
+}
+.pt {
+  font-size: 20pt;
+}
+.em {
+  font-size: 15px;
+}
+.custom {
+  font-size: .9em;
+}
+.parents {
+  font-size: 20px;
+}
+.child {
+  font-size: .9rem;
+}
+.notshorthand {
+  font-size: 20px;
+  width: 80%;
+  border-color: #3ba1a1;
+  border-style: solid;
+  border-top-width: 5px;
+  border-right-width: 10px;
+  border-bottom-width: 15px;
+  border-left-width: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.shorthand {
+  font-size: 20px;
+  width: 80%;
+  border-color:#3ba1a1;
+  border-style: solid;
+  border-width: 5px 20px 15px 10px;
+  margin: 40px 40px 10px 40px;
+  padding: 15px 10px 20px 20px;
+}
+  </style>
+</head>
+<body>
+    <div class="chapter_name">
+      <h1><b> CHAPTER 11</b></h1>
+      <h2><b>Getting to Know CSS</b></h2>
+    </div> 
+
+     <div class="content">
+      <div class="side_contents">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#cssUnits">CSS Units</a></li>
+          <li><a href="#shorthandElement">Shorthand Properties</a></li>
+
+        </ol>
+      </div>
+
+<div class="main_content">
+        <div id="cssUnits">
+          <h1>CSS Units</h1>
+          <div class="absoluteLengths">
+            <h1>Absolute Lengths</h1>
+            <hr />
+            <p class="cm">This is paragraph which font size is 1cm</p>
+            <p class="mm">This is paragraph which font size is 5mm</p>
+            <p class="in">This is paragraph which font size is 0.4in</p>
+            <p class="px">This is paragraph which font size is 16px</p>
+            <p class="pt">This is paragraph which font size is 20pt</p>
+          </div>
+          <br />
+          <div class="reletiveLength">
+            <h1>Reletive Length</h1>
+            <hr />
+            <div class="em">
+              <h1>em</h1>
+              <h2>Usling font-size=15px current element</h2>
+              <p>
+                This is a paragraph which location is parent(div). Font size of
+                this paragraph in 15px
+              </p>
+              <h2>Using font-size=2em</h2>
+              <p class="custom">
+                This is a paragraph which location is also in parent(div). Font
+                size of this paragraph in 2em but actual font size of this
+                paragrph  because em means two times of the sixe of
+                the current element's font
+              </p>
+            </div>
+            <div class="rem">
+              <h1>Rem</h1>
+              <h2>Usling font-size=.9px in parents</h2>
+              <div class="parents">
+                This is a paragraph which location is parent. Font size of this
+                paragraph 
+                <div class="child">
+                  <h2>Using font-size=2rem in child</h2>
+                  <p class="child">
+                    This is a paragraph which location is child. Font size of
+                    this paragraph in 2em but actual font size of this paragrph
+                    because em means two times of the sixe of the
+                    current element's font
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div id="shorthandElement">
+          <h1>Shorthand Properties</h1>
+          <hr />
+          <h2>Using properties</h2>
+          <div class="notshorthand">
+            <h2>Using properties</h2>
+            <pre>
+                  font-size: 20px;
+                  width: 80%;
+                  border-color: rgb(166, 255, 0);
+                  border-style: solid;
+                  border-top-width: 5px;
+                  border-right-width: 10px;
+                  border-bottom-width: 15px;
+                  border-left-width: 20px;
+                  margin-top: 40px;
+                  margin-left: 40px;
+                  margin-bottom: 10px;
+                  margin-right: 40px;
+                  padding-left: 10px;
+                  padding-right: 20px;
+                  padding-top: 15px;
+                  padding-bottom: 20px;
+            </pre>
+          </div>
+          <div class="shorthand">
+            <h2>Using properties with Shorthand</h2>
+            <pre>
+                font-size: 20px;
+                width: 80%;
+                border-color: rgb(166, 255, 0);
+                border-style: solid;
+                border-width: 5px 20px 15px 10px;
+                margin: 40px 40px 10px 40px;
+                padding: 15px 10px 20px 20px;
+            </pre>
+          </div>
+        </div>
+
+    </div>
+     </div>
+       <div class="button-container">
+        <a href="book.html" class="nav-button">Book</a>
+        <a href="chapter8.html" class="nav-button">Previous</a>
+        <a href="chapter13.html" class="nav-button">Next</a>
+      </div>
+</body>
+</html>

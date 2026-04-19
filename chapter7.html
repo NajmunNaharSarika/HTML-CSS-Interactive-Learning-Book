@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+    .graphic-container {
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        overflow: hidden; 
+      }
+
+      .graphic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 10px;
+      }
+
+      .graphic-header h3 {
+        margin: 0;
+        color: #3ba1a1;
+      }
+
+
+      .toggle-btn {
+        background-color: #f0f4f8;
+        border: 1px solid #3ba1a1;
+        color: #3ba1a1;
+        padding: 5px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.2s;
+      }
+
+      .toggle-btn:hover {
+        background-color: #3ba1a1;
+        color: white;
+      }
+
+
+      svg {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+        height: auto;
+        background-color: #fcfcfc;
+        border: 1px dashed #ccc; 
+      }
+
+      canvas {
+        display: block;
+        margin: 10px auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+    </style>
+
+    <script>
+    
+      function toggleGraphic(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
+</head>
+<body>
+     <div class="chapter_name">
+      <h1><b> CHAPTER 07</b></h1>
+      <h2><b>HTML Graphics: Financial Data Visualization</b></h2>
+    </div> 
+
+     <div class="content">
+      <div class="side_contents">
+        <h2>Table of Contents</h2>
+        <ol>
+           <li><a href="#SVGGraphics">SVG Graphics</a></li>
+          <li><a href="#canvas">Canvas</a></li>
+
+        </ol>
+      </div>
+
+       <div class="main_content">
+
+        <div id="SVGGraphics">
+          <h1>Scalable Vector Graphics (SVG)</h1>
+          <hr />
+          <p>
+            SVG is used for resolution-independent financial charts and secure
+            icons.
+          </p>
+
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>Basic Shapes</h3>
+              
+            </div>
+            <div id="svg-shapes">
+              <p>
+                Using Rectangle, Circle, and Ellipse .
+              </p>
+              <svg width="600" height="300">
+
+                 <ellipse
+                  cx="200"
+                  cy="80"
+                  rx="60"
+                  ry="30"
+                  fill="#e6f2ff"
+                  stroke="#004d99"
+                  stroke-width="2"
+                />
+               
+
+                <rect x="230" y="230" width="150" height="50" fill="#3ba1a1" />
+                
+
+
+                <circle cx="300" cy="150" r="40" fill="#00a04d" />
+               
+
+ 
+                <ellipse
+                  cx="400"
+                  cy="80"
+                  rx="60"
+                  ry="30"
+                  fill="#e6f2ff"
+                  stroke="#004d99"
+                  stroke-width="2"
+                />
+               
+              </svg>
+            </div>
+          </div>
+
+
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3> Lines & Polyline </h3>
+            
+            </div>
+            <div id="svg-lines">
+              <svg width="400" height="200">
+
+                <line
+                  x1="50"
+                  y1="150"
+                  x2="350"
+                  y2="150"
+                  stroke="#bf0911"
+                  stroke-width="1"
+                />
+                <line
+                  x1="50"
+                  y1="50"
+                  x2="50"
+                  y2="150"
+                  stroke="#bf0911"
+                  stroke-width="1"
+                />
+
+
+                <polyline
+                  points="50,140 100,100 150,120 200,80 250,90 300,40 350,60"
+                  fill="none"
+                  stroke="#3ba1a1"
+                  stroke-width="3"
+                />
+                <text x="150" y="180" fill="#333">
+                 
+                </text>
+              </svg>
+            </div>
+          </div>
+
+
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>Polygon </h3>
+             
+            </div>
+            <div id="svg-polygon">
+              <svg width="200" height="200">
+                <polygon
+                  points="100,10 40,198 190,78 10,78 160,198"
+                  fill="#3ba1a1"
+                  stroke="#1e5c5c"
+                  stroke-width="2"
+                  fill-opacity="0.5"
+                />
+                <text x="60" y="220" font-size="12">Volatility Index</text>
+              </svg>
+            </div>
+          </div>
+
+
+
+         
+
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>SVG Stroke Styles </h3>
+            </div>
+            <div id="svg-stroke">
+              <svg width="400" height="150">
+
+                <line
+                  x1="10"
+                  y1="20"
+                  x2="390"
+                  y2="20"
+                  stroke="#1e5c5c"
+                  stroke-width="5"
+                />
+
+
+                <line
+                  x1="10"
+                  y1="60"
+                  x2="390"
+                  y2="60"
+                  stroke="#004d99"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                />
+
+
+                <line
+                  x1="10"
+                  y1="100"
+                  x2="390"
+                  y2="100"
+                  stroke="#00a04d"
+                  stroke-width="4"
+                  stroke-dasharray="10, 5"
+                />
+               
+              </svg>
+            </div>
+          </div>
+
+          <!--Gradients -->
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3> SVG Gradients (Heatmaps)</h3>
+              
+            </div>
+            <div id="svg-gradients">
+              <svg width="400" height="150">
+                <defs>
+                  <!-- Linear Gradient -->
+                  <linearGradient
+                    id="growthGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #e6f2ff; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #09744b; stop-opacity: 1"
+                    />
+                  </linearGradient>
+
+                  <!-- Radial Gradient -->
+                  <radialGradient
+                    id="alertGrad"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: rgb(255, 255, 255); stop-opacity: 0"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: rgb(239, 243, 12); stop-opacity: 1"
+                    />
+                  </radialGradient>
+                </defs>
+
+                <rect
+                  x="10"
+                  y="10"
+                  width="180"
+                  height="100"
+                  fill="url(#growthGrad)"
+                />
+                <circle cx="300" cy="60" r="40" fill="url(#alertGrad)" />
+
+                <text x="30" y="130">Linear Growth</text>
+                <text x="270" y="130">Radial Alert</text>
+              </svg>
+            </div>
+          </div>  
+        </div>
+
+        <hr />
+
+        <!-- CANVAS -->
+        <div id="canvas">
+          <h1>7.2 HTML5 Canvas </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, impedit.
+          </p>
+
+          <!-- Draw Text & Draw Lines -->
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>Draw Text & Lines</h3>
+             
+            </div>
+            <div id="canvas-basic">
+              <canvas id="myCanvas1" width="400" height="100"></canvas>
+              <script>
+                var c = document.getElementById("myCanvas1");
+                var ctx = c.getContext("2d");
+                //Draw Line
+                ctx.moveTo(0, 0);
+                ctx.lineTo(400, 100);
+                ctx.strokeStyle = "#004d99";
+                ctx.stroke();
+                // Draw Text
+                ctx.font = "30px Arial";
+                ctx.fillStyle = "#00a04d";
+                ctx.fillText("", 10, 50);
+              </script>
+            </div>
+          </div>
+
+          <!-- Circle & Rectangle -->
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>-  Draw Shapes</h3>
+             
+            </div>
+            <div id="canvas-shapes">
+              <canvas id="myCanvas2" width="400" height="150"></canvas>
+              <script>
+                var c2 = document.getElementById("myCanvas2");
+                var ctx2 = c2.getContext("2d");
+                // Draw Rectangle
+                ctx2.fillStyle = "#e6f2ff";
+                ctx2.fillRect(20, 20, 150, 100);
+                //  Draw Circle
+                ctx2.beginPath();
+                ctx2.arc(280, 70, 40, 0, 2 * Math.PI);
+                ctx2.fillStyle = "red";
+                ctx2.fill();
+                ctx2.stroke();
+              </script>
+            </div>
+          </div>
+
+          <!--  Gradients -->
+          <div class="graphic-container">
+            <div class="graphic-header">
+              <h3>Draw Gradients</h3>
+             
+            </div>
+            <div id="canvas-grad">
+              <canvas id="myCanvas3" width="400" height="150"></canvas>
+              <script>
+                var c3 = document.getElementById("myCanvas3");
+                var ctx3 = c3.getContext("2d");
+
+                // Linear Gradient
+                var grd = ctx3.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "#004d99");
+                grd.addColorStop(1, "white");
+                ctx3.fillStyle = grd;
+                ctx3.fillRect(10, 10, 180, 80);
+
+                // Radial Gradient
+                var grd2 = ctx3.createRadialGradient(300, 50, 5, 300, 50, 50);
+                grd2.addColorStop(0, "red");
+                grd2.addColorStop(1, "white");
+                ctx3.fillStyle = grd2;
+                ctx3.fillRect(250, 10, 100, 100);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     </div>
+    
+       <div class="button-container">
+        <a href="book.html" class="nav-button">Book</a>
+        <a href="chapter6.html" class="nav-button">Previous</a>
+        <a href="chapter8.html" class="nav-button">Next</a>
+      </div>
+</body>
+</html>

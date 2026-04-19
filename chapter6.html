@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+     <style>
+      /* --- Multimedia Section Styling --- */
+      .media-container {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .media-header {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #3ba1a1; 
+        padding-bottom: 10px;
+      }
+
+      .media-header h2 {
+        color: #3ba1a1;
+        margin: 0;
+        font-size: 1.4em;
+      }
+
+      .media-description {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      /* Audio Player Styling */
+      audio {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 10px;
+        border-radius: 30px;
+        background-color: #f1f3f4;
+      }
+
+      /* Video Player Styling */
+      video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #000;
+      }
+
+      /* Transcript / Caption box */
+      .transcript-box {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #00a04d; 
+        font-size: 0.9em;
+      }
+      .transcript-box h3 {
+        margin-top: 0;
+        font-size: 1em;
+        color: #333;
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="chapter_name">
+      <h1><b> CHAPTER 06</b></h1>
+      <h2><b>HTML Multimedia: Investor Relations & Training</b></h2>
+    </div> 
+
+     <div class="content">
+      <div class="side_contents">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#audio">Audio </a></li>
+          <li><a href="#video">Video </a></li>
+
+        </ol>
+      </div>
+       <div class="main_content">
+        <!-- 6.1 AUDIO -->
+        <div id="audio">
+          <div class="media-container">
+            <div class="media-header">
+              <h1>Audio</h1>
+              <h2>Lorem ipsum dolor sit amet.</h2>
+            </div>
+            <p class="media-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aut, cum minima culpa sapiente aperiam.
+            </p>
+            <audio controls loop>
+              <source src="/media/Tum.mp3" type="audio/mp3" />
+              
+            </audio>
+
+            <div class="transcript-box">
+              <h3>Key Audio:</h3>
+              <ul>
+                <li>Tum Kya Mile.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <!-- VIDEO -->
+        <div id="video">
+          <div class="media-container">
+            <div class="media-header">
+              <h1> Video</h1>
+              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            </div>
+            <p class="media-description">
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Quis laborum eveniet alias vitae reprehenderit dolorem!
+            </p>
+            <video
+              controls
+              width="800"
+              height="450"
+              
+            >
+              <source src="/media/cat.mp4" type="video/mp4" />
+            </video>
+
+            <div class="transcript-box">
+              <h3>Video Summary:</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente fugit nemo officiis a ducimus obcaecati culpa quaerat rerum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     </div>
+       <div class="button-container">
+        <a href="book.html" class="nav-button">Book</a>
+        <a href="chapter5.html" class="nav-button">Previous</a>
+        <a href="chapter7.html" class="nav-button">Next</a>
+      </div>
+</body>
+</html>

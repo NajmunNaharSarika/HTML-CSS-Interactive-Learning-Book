@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+     <style>
+    /* --- General Form  --- */
+      .main {
+        width: 100%;
+        max-width: 1000px;
+        margin: 50px auto;
+        border: 3px solid #3ba1a1; 
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 6px;
+      }
+      legend {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #3ba1a1;
+        padding: 0 10px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin: 10px 0 5px;
+        color: #333;
+      }
+      input:not([type="checkbox"]):not([type="radio"]),
+      textarea,
+      select {
+        width: 98%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .input-group {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .input-group > div {
+        flex: 1 1 45%; 
+        min-width: 250px;
+      }
+      
+      /*  Styles for Invalid Inputs  */
+      input:invalid:not(:placeholder-shown),
+      input.validation-error {
+        border-color: #cc0000; 
+        box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+      }
+      input:focus:invalid {
+          background-color: #fff0f0;
+      }
+
+      /* Button Styles */
+      .button-group button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+      .button-group button[type="submit"] {
+        background-color: #00a04d; 
+        color: white;
+      }
+      .button-group button[type="reset"] {
+        background-color: #cc0000; 
+        color: white;
+      }
+      .button-group button:not([type]) {
+        background-color: #f0f4f8; 
+        color: #3ba1a1;
+      }
+    </style>
+</head>
+<body>
+    <div class="chapter_name">
+      <h1><b> CHAPTER 05</b></h1>
+      <h2><b>Web Forms</b></h2>
+    </div> 
+
+     <div class="content">
+      <div class="side_contents">
+        <h2>Table of Contents</h2>
+        <ol>
+           <li><a href="#formElements">HTML Form Elements</a>
+            <ol>
+              <li><a href="#inputLabel">Input & Label</a></li>
+              <li><a href="#textarea">Textarea</a></li>
+              <li><a href="#selectOption">Select & Option</a></li>
+              <li><a href="#buttonElement">Button</a></li>
+              <li><a href="#fieldsetLegend">Fieldset & Legend</a></li>
+              <li><a href="#datalist">Datalist</a></li>
+            </ol>
+          </li>
+          <li><a href="#inputTypes">HTML Input Types</a>
+            <ol>
+              <li><a href="#buttonTypes">Buttons</a></li>
+              <li><a href="#textTypes">Texts</a></li>
+              <li><a href="#numberTypes">Numbers</a></li>
+              <li><a href="#optionTypes">Options</a></li>
+              <li><a href="#fileType">Files</a></li>
+              <li><a href="#dateTimeTypes">Date and Time</a></li>
+              <li><a href="#colorType">Colors</a></li>
+            </ol>
+          </li>
+          <li><a href="#inputAttributes">HTML Input Attributes</a></li>
+          <li><a href="#formValidation">Form Validation</a></li>
+
+        </ol>
+      </div>
+
+     
+        
+      <div class="main_content">
+        <main class="main">
+          
+          <form action="/submit_financial_data" method="POST">
+            
+            <div id="formElements">
+              <h1> HTML Form Elements</h1>
+              <hr />
+
+              <fieldset id="fieldsetLegend">
+                <legend>Client Onboarding & Verification</legend>
+
+                <div id="inputLabel">
+                  <label for="patientName">Patient Full Name:</label>
+                  <input type="text" id="patientName" name="patientName" placeholder="Enter full name" required>
+                </div>
+
+                <div id="textarea">
+                  <label for="notes">Compliance Notes:</label>
+                  <textarea id="notes" name="notes" rows="4" ></textarea>
+                </div>
+
+                <div id="selectOption">
+                  <label for="currency">Default Account Currency:</label>
+                  <select id="currency" name="currency" required>
+                    <option selected disabled value="">Select Currency</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                  </select>
+                </div>
+
+                <div id="datalist">
+                  <label for="country"> Country :</label>
+                  <input list="countries" id="country" name="country" placeholder="Select country" required>
+                  <datalist id="countries">
+                    <option value="Bangladesh">
+                    <option value="Canada">
+                    <option value="Germany">
+                    <option value="Japan">
+                    <option value="Korea">
+                  </datalist>
+                </div>
+              </fieldset>
+            </div>
+            <br>
+            
+            <div id="inputTypes">
+              <h1> HTML Input Types</h1>
+              <hr />
+              
+              <fieldset>
+                <legend> Security and Text Inputs</legend>
+                <div class="input-group" id="textTypes">
+                  
+                  <div>
+                    <label for="pin">Password:</label>
+                    <input type="password" id="pin" name="pin" minlength="6" placeholder="Min 6 characters" required>
+                  </div>
+                  
+                  <div>
+                    <label for="supportEmail">Email :</label>
+                    <input type="email" id="supportEmail" name="supportEmail" placeholder="e.g., alerts@securebank.com" required>
+                  </div>
+                  
+                  <div>
+                    <label for="website">Corporate Website :</label>
+                    <input type="url" id="website" name="website" >
+                  </div>
+                  
+                  <div>
+                    <label>Hidden Field:</label>
+                    <p style="font-style: italic; font-size: 0.9em;">
+                      <input type="hidden" id="sessionID" name="sessionID" value="TxnID_20251118_A9B7">
+                    
+                    </p>
+                  </div>
+                </div>
+              </fieldset>
+              
+              <fieldset>
+                <legend>Numerical Inputs</legend>
+                <div class="input-group" id="numberTypes">
+                  
+                  <div>
+                    <label for="Amount">Total Amount :</label>
+                    <input type="number" id="Amount" name="Amount" min="5000" max="1000000" step="1000" value="10000" required>
+                  </div>
+
+                  
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Options &  File Uploads</legend>
+                <div class="input-group">
+                  <div id="optionTypes">
+                    <label>Total Due Amount:</label>
+                    <p>
+                      <input type="checkbox" id="due" name="due[]" value="due" checked>
+                      <label for="due" style="display: inline;">DUE Amount</label>
+                    </p>
+                
+                  </div>
+
+                  <div>
+                    <label> Document Type:</label>
+                    <p>
+                      <input type="radio" id="passport" name="docType" value="passport" checked>
+                      <label for="passport" style="display: inline;">Passport</label>
+                    </p>
+                    <p>
+                      <input type="radio" id="idcard" name="docType" value="idcard">
+                      <label for="idcard" style="display: inline;">National ID Card</label>
+                    </p>
+                    <p>
+                      <input type="radio" id="driver" name="docType" value="driver">
+                      <label for="driver" style="display: inline;">Driver's License</label>
+                    </p>
+                  </div>
+                </div>
+                
+                <div id="fileType">
+                    <label for="documentUpload">Upload ID Document :</label>
+                    <input type="file" id="documentUpload" name="documentUpload" accept=".pdf, .jpg, .png" multiple>
+                    <p style="font-size: 0.85em; font-style: italic;">
+                      Use the "multiple" attribute to upload both front and back images.
+                    </p>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Date/Time &  Color Inputs</legend>
+                <div class="input-group" id="dateTimeTypes">
+                  <div>
+                    <label for="txDate">Date of Transaction:</label>
+                    <input type="date" id="txDate" name="txDate">
+                  </div>
+                  
+                  <div>
+                    <label for="openTime">Hospital Open Time:</label>
+                    <input type="time" id="openTime" name="openTime">
+                  </div>
+                  
+                  <div>
+                    <label for="AppointmentTime">Appointment Time:</label>
+                    <input type="datetime-local" id="AppointmentTime" name="AppointmentTime">
+                  </div>
+                </div>
+                
+                <div id="colorType">
+                  <label for="themeColor"> Preferred Dashboard Accent Color:</label>
+                  <input type="color" id="themeColor" name="themeColor" value="#3ba1a1" style="height: 100px;">
+                </div>
+              </fieldset>
+            </div>
+            <br>
+
+            <div id="inputAttributes">
+              <h1>HTML Input Attributes</h1>
+              <hr />
+              <fieldset>
+                <legend>Attribute Demonstration</legend>
+                
+                <div class="input-group">
+                  <div>
+                    <label for="hospitalName">Name, Value, Placeholder, Autofocus, Autocomplete:</label>
+                    <input 
+                      type="text" 
+                      id="hospitalName" 
+                      name="hospital_name_field" 
+                      value="hospital" 
+                      placeholder="e.g.,hospital Global" 
+                      autofocus 
+                      autocomplete="organization"
+                    >
+                  </div>
+
+                  <div>
+                    <label for="patientID"> Readonly, Disabled, Size:</label>
+                    <input 
+                      type="text" 
+                      id="patientID" 
+                      name="patientID" 
+                      value="1232" 
+                      readonly 
+                      disabled
+                      size="15"
+                    >
+                    <p style="font-size: 0.8em; font-style: italic; color: #cc0000;">
+                     
+                    </p>
+                  </div>
+                </div>
+
+                <label for="transferAmount">Step Attribute </label>
+                <input 
+                  type="number" 
+                  id="transferAmount" 
+                  name="transferAmount" 
+                  min="10" 
+                  max="1000" 
+                  step="0.01" 
+                  placeholder="Enter amount "
+                >
+                <p style="font-size: 0.8em; font-style: italic;">
+                  Forces amount to be entered up to 2 decimal places.
+                </p>
+
+                <div class="button-group">
+                  <button type="button"> <button> Element Example</button>
+                  <button type="submit"> Submit</button>
+                  <button type="reset"> Reset</button>
+                  
+                  <button type="button" value="calculate" style="background-color: #f0f4f8;">Button Type</button>
+                </div>
+
+              </fieldset>
+            </div>
+            <br>
+            
+            <div id="formValidation">
+              <h1>Form Validation</h1>
+              <hr />
+              <fieldset>
+                <legend>Data Validation and Constraints</legend>
+
+                <div>
+                  <label for="requiredField">Required Field:</label>
+                  <input type="text" id="requiredField" name="requiredField" placeholder="This field is mandatory" required>
+                </div>
+                
+                <div class="input-group">
+                  <div>
+                    <label for="serNo">serial No:</label>
+                    <input 
+                      type="text" 
+                      id="serNo" 
+                      name="serNo" 
+                      minlength="1" 
+                      maxlength="3" 
+                      placeholder="000" 
+                      required
+                    >
+                  </div>
+
+                  
+                </div>
+
+               
+              </fieldset>
+            </div>
+          </form>
+        </main>
+        
+        <br />
+      </div>
+    </div>
+
+
+       <div class="button-container">
+        <a href="book.html" class="nav-button">Book</a>
+        <a href="chapter4.html" class="nav-button">Previous</a>
+        <a href="chapter6.html" class="nav-button">Next</a>
+      </div>
+      </div>
+</body>
+</html>

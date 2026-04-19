@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      caption {
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+      #my-iframe {
+        width: 800px;
+        height: 600px;
+        border: none;
+      }
+    </style>
+
+</head>
+
+<body>
+    <div class="chapter_name">
+      <h1><b> CHAPTER 02</b></h1>
+      <h2><b>HTML Element</b></h2>
+    </div> 
+    <div class="content">
+      <div class="side_contents">
+        <h2>Table of Contents</h2>
+        <ol>
+          <li><a href="#heading">Heading</a></li>
+          <li><a href="#paragraph">Paragraph</a></li>
+          <li><a href="#hyperlink">Hyperlink</a></li>
+          <li><a href="#image">Image</a></li>
+          <li><a href="#imageMap">Image Map</a></li>
+          <li><a href="#list">List</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#breaks">Break</a></li>
+          <li><a href="#progressBars">Progress Bars</a></li>
+          <li><a href="#computerCode">Computer Code</a></li>
+          <li><a href="#iframes">Iframes</a></li>
+          <li><a href="#htmlEntities">HTML Entities</a></li>
+        </ol>
+      </div>
+
+       <div class="main_content">
+
+        <div id="heading">
+          <p style="font-size: 24px">Heading</p>
+          <hr />
+          <h1>Welcome to My Website</h1>
+          <p>
+            This is a simple webpage demonstrating different heading levels.
+          </p>
+
+          <h2>About Us</h2>
+          <p>We are passionate about web development and design.</p>
+
+          <h3>Our Services</h3>
+          <p>We provide web development, SEO, and UI/UX design services.</p>
+
+          <h4>Web Development</h4>
+          <p>We create responsive and modern websites.</p>
+
+          <h5>Technologies We Use</h5>
+          <p>HTML, CSS, JavaScript, React, and more.</p>
+
+          <h6>Contact Us</h6>
+          <p>Email: info@example.com</p>
+        </div>
+        <br />
+        <div id="paragraph">
+          <h1>Paragraph</h1>
+          <hr />
+          <br />
+          <p>
+            This is a paragraph in HTML. It is used to display text content in a
+            structured way.
+          </p>
+        </div>
+        <br />
+        <div id="hyperlink">
+          <h1>Hyperlink</h1>
+          <hr />
+          <h2>External Anchors</h2>
+          <a href="https://www.prothomalo.com/">প্রথম আলো</a> <br />
+          <br />
+          <a href="https://www.thedailystar.net/" target="_blank"
+            >The Daily Star</a
+          >
+          <br />
+          <h2>Internal Anchors</h2>
+          <br />
+          <p id="top">Click the link below to jump to the image.</p>
+          <h2 id="section1">Section 1</h2>
+          <p>This is some text in Section 1.</p>
+
+          <h2 id="section2">Section 2</h2>
+          <p>This is some text in Section 2.</p>
+
+          <h2 id="Image">Image</h2>
+          <img src="image/p1.png"  width="400" />
+
+          <h2 id="Image">Image</h2>
+          <img src="image/p2.png" width="400" />
+
+          <br />
+          <a href="#top">Back to Top</a>
+          <br />
+          <h2>Download Link</h2>
+          <br />
+          <img
+            src="image/p4.jpg"
+            width="300"
+            height="300"
+          />
+          <br />
+          <a href="image/p3.png" download="=p">Download Image</a>
+        </div>
+        <br />
+        <div id="image">
+          <h1>Image</h1>
+          <hr />
+          <h2>Image with only source</h2>
+          <br />
+          <img src="image/p1.png" /> <br />
+          <h2>Image with Alt attribute</h2>
+          <img
+            src="image/p1.png"
+           
+          />
+          <br />
+          
+        </div>
+        <br />
+        <div id="imageMap">
+          <h1>Image Map</h1>
+          <hr />
+          <map name="worldmap">
+            <area
+              shape="rect"
+              coords="50,50,200,200"
+              href="https://en.wikipedia.org/wiki/Bangladesh"
+              alt="USA"
+            />
+            <area
+              shape="circle"
+              coords="300,150,50"
+              href="https://en.wikipedia.org/wiki/Bangladesh"
+              alt="Europe"
+            />
+          </map>
+          <br />
+
+        </div>
+        <br />
+        <div id="list">
+          <h1>Lists</h1>
+          <br />
+          <hr />
+          <h2 style="margin-left: 20px">Unordered List</h2>
+          <br />
+          <ul style="margin-left: 100px">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <br />
+          <h2 style="margin-left: 20px">Ordered List</h2>
+          <br />
+          <ol style="margin-left: 100px">
+            <li>C-Sharp</li>
+            <li>PHP</li>
+            <li>Java</li>
+          </ol>
+          <br />
+          <h2 style="margin-left: 20px">Description List</h2>
+          <br />
+          <dl style="margin-left: 95px">
+            <dt><b>C++</b></dt>
+            <dd>C++ ipsum dolor sit amet consectetur adipisicing elit.</dd>
+
+            <dt><b>Python</b></dt>
+            <dd>Python ipsum dolor, sit amet consectetur adipisicing elit.</dd>
+
+            <dt><b>Java</b></dt>
+            <dd>Java ipsum dolor sit amet consectetur adipisicing.</dd>
+
+            <dt><b>MySQL</b></dt>
+            <dd>
+             MySQL ipsum, dolor sit amet consectetur adipisicing elit..
+            </dd>
+          </dl>
+        </div>
+        <br />
+        <div id="table">
+          <h1>Table</h1>
+          <hr />
+          <br />
+          <table>
+            <caption>
+              Educational Qualifications:
+            </caption>
+            <tr>
+              <th>Name of Examination</th>
+              <th>Group/Major</th>
+              <th>Institute/Board</th>
+              <th>Result</th>
+              <th>Passing Year</th>
+            </tr>
+            <tr>
+              <td>B.Sc engg in CSE</td>
+              <td>Computer Science & Engineering</td>
+              <td>Bangladesh University of Business And Technology</td>
+              <td>3.51/4.00</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td>Diploma</td>
+              <td>Computer Technology  </td>
+              <td>BTEB</td>
+              <td>3.77/4.00</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>S.S.C.</td>
+              <td>Science</td>
+              <td>Barishal</td>
+              <td>4.61/5.00</td>
+              <td>2015</td>
+            </tr>
+          </table>
+        </div>
+        <div id="breaks">
+          <h1>Breaks</h1>
+          <hr />
+          <br />
+          <h2>Line Breaking</h2>
+          <p>
+            Lorem ipsum dolor sit <br />
+            amet consectetur adipisicing elit. Laudantium aperiam numquam unde
+            odit.
+            Odit vero magni illo maxime doloremque placeat a dolorem velit
+            quidem <br />
+            id, perferendis dolore porro assumenda libero natus earum ea
+            perspiciatis, rerum laborum in, suscipit<br /> quos excepturi officia
+            ullam! Sapiente nemo ullam, 
+            enim sunt tenetur culpa mollitia.
+          </p>
+          <br />
+          <h2>Lorem ipsum dolor sit.</h2>
+          <p>
+            The <b>hr</b> element defines a thematic break in a webpage, a topic
+            shift.
+          </p>
+          <hr />
+          <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto?
+          </p>
+        </div>
+        <div id="progressBars">
+          <h1>Progress Bars</h1>
+          <hr />
+          <br />
+          <p>
+            Uploading:
+            <progress value="40" max="100"></progress>
+            40%
+          </p>
+          <br />
+          <h1>Meter</h1>
+          <br />
+          <p>
+            Disk usage:
+            <meter value="120" max="500"></meter>
+            120GB of 500GB
+          </p>
+        </div>
+        <div id="computerCode">
+          <h1>Computer Code</h1>
+          <hr />
+          <br />
+          <h2>Code</h2>
+          <p>
+            The <b>code</b> code element defines computer code.
+            <code
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit.</code
+            >
+          </p>
+          <br />
+          <h2>Pre</h2>
+          <pre>
+                      Lorem ipsum dolor 
+                      sit amet consectetur 
+                      adipisicing elit. Iure, 
+                      dignissimos.
+          </pre>
+        </div>
+        <br />
+        <div id="iframes">
+          <h1>IFrames</h1>
+          <hr />
+          <h2>Newspaper</h2>
+          <iframe id="my-iframe" src="https://www.prothomalo.com/"></iframe>
+        </div>
+        <br />
+        <div id="htmlEntities">
+          <h1>HTML Entities</h1>
+          <hr />
+          <p>greater than symbol: &gt;</p>
+          <p>less than symbol: &lt;</p>
+          <p>an ampersand: &amp;</p>
+          <p>copyright symbol: &copy; 2025</p>
+          <p>registered trademark symbol: &reg;</p>
+          <p>Currency symbols: Dollar (&dollar;), Euro (&euro;), Pound (&pound;)</p>
+          <p>
+            Mathematical symbols: Plus-Minus (&plusmn;), Multiplication
+            (&times;), Division (&divide;)
+          </p>
+        </div>
+        
+      </div>
+   
+       </div>
+
+    <div class="button-container">
+        <a href="book.html" class="nav-button">Book</a>
+        <a href="chapter1.html" class="nav-button">Previous</a>
+        <a href="chapter3.html" class="nav-button">Next</a>
+   </div>
+</body>
+</html>
